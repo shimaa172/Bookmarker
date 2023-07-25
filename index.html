@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Bookmark </title>
+    <!-- Logo -->
+    <link rel="shortcut icon" href="favicon_io/favicon.ico">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- Main Template CSS File -->
+    <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fasthand&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fasthand&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <!-- Font Awesome Librarry-->
+    <link rel='stylesheet' type='text/css' media='screen' href='libs/fontawsome/css/all.min.css'>
+    <!-- Bootstrap Librarry -->
+    <link rel='stylesheet' type='text/css' media='screen' href='libs/Bootstrap/css/bootstrap.min.css'>
+
+</head>
+<body>
+    <!-- Start Main -->
+    <main class="interface position-relative py-5">
+        <div class="container d-flex flex-column justify-content-center align-items-center">
+          <!-- Header -->  
+          <h1 class="position-relative py-2">Bookmarker</h1>
+
+          <!-- Boody -->
+          <div class="bookmark-body d-flex flex-column justify-content-center align-items-center gap-4 w-100 p-3 py-4 mt-5">
+            <!-- Head -->
+            <h2>
+              <i class="fa-solid fa-bookmark"></i>
+              Bookmark your favorite sites
+              <i class="fa-solid fa-bookmark"></i>
+            </h2>
+            <!-- Name -->
+            <div class="site-name w-100 d-flex flex-column justify-content-center">
+              <label for="bookmarkName" class="pb-2 fw-semibold">
+                <i class="fa-solid fa-book-bookmark pe-2"></i>
+                Site Name</label>
+              <input type="text" placeholder="Bookmark Name" class="form-control" id="bookmarkName" onkeypress="validateBookmarkName()">
+            </div>
+            <!-- URL -->
+            <div class="site-url w-100 d-flex flex-column justify-content-center">
+              <label for="bookmarkURL" class="pb-2 fw-semibold">
+                <i class="fa-solid fa-link pe-2"></i>Site URL</label>
+              <input type="url" placeholder="Website URL" class="form-control " id="bookmarkURL" onkeypress="validateBookmarkURL()">
+            </div>
+            <button class="btn btn-danger px-5" id="submitBtn" onclick="addBookmaker()">Submit</button>
+          </div>
+
+          <!-- Table -->
+          <table class="table mt-4 text-center bg-light">
+            <thead>
+              <tr><th class="text-capitalize">index</th>
+              <th class="text-capitalize">Website Name</th>
+              <th class="text-capitalize">Visit</th>
+              <th class="text-capitalize">Delete</th>
+            </tr></thead>
+            <tbody id="tableContent">
+            </tbody>
+          </table>
+        </div>
+
+      </main>
+    <!-- End Main -->
+
+    <!-- Bootstrap Librarry -->
+    <script src='libs/Bootstrap/js/bootstrap.bundle.min.js'></script>
+    <!-- Main Js File -->
+    <script src='js/main.js'></script>
+</body>
+</html>
